@@ -3,7 +3,6 @@ import pytest
 import copy
 import math
 import nltk
-nltk.download('stopwords')
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import numpy as np
@@ -12,6 +11,18 @@ import re
 import requests
 import sys
 import xml.etree.ElementTree as ET
+this is an error
+# Install stopwords with SSL verification disabled
+# This should work even if Python's extra certificates are not installed
+import ssl
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+nltk.download('stopwords')
 
 '''
 If you can run the tests using the testing tab of VSCode and they pass, you are set up to use
