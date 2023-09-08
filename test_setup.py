@@ -11,7 +11,7 @@ import re
 import requests
 import sys
 import xml.etree.ElementTree as ET
-this is an error
+
 # Install stopwords with SSL verification disabled
 # This should work even if Python's extra certificates are not installed
 import ssl
